@@ -13,18 +13,21 @@ public class TreeMain {
 		binaryTree.insertElement(14);
 		binaryTree.insertElement(21);
 		
-		binaryTree.insertElement(12);
-		binaryTree.insertElement(10);
-		binaryTree.insertElement(20);
-		binaryTree.insertElement(8);
-		binaryTree.insertElement(11);
-		binaryTree.insertElement(14);
-		binaryTree.insertElement(21);
+//		binaryTree.insertElement(12);
+//		binaryTree.insertElement(10);
+//		binaryTree.insertElement(20);
+//		binaryTree.insertElement(8);
+//		binaryTree.insertElement(11);
+//		binaryTree.insertElement(14);
+//		binaryTree.insertElement(21);
 		
-		binaryTree.insertElement(19);
-		binaryTree.insertElement(16);
+//		binaryTree.insertElement(19);
+//		binaryTree.insertElement(16);
 		
-		binaryTree.printLevelOrder();
+//		binaryTree.printLevelOrder();
+//		binaryTree.printGivenLevel(binaryTree.root, 3);
+		binaryTree.inOrderTraversal(binaryTree.root);
+//		BTreePrinter.printBtreeNode(binaryTree.root);
 	}
 
 }

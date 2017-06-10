@@ -12,6 +12,24 @@ public class SubhashBinaryTree {
 		this.root = treeNode;
 	}
 	
+	public int getHeight(BtreeNode treeNode){
+		int height = 0;
+		if(treeNode == null){
+			return 0;
+		}
+		if(treeNode.left != null || treeNode.right !=null){
+			int leftHeight = getHeight(treeNode.left);
+			int rightHeight = getHeight(treeNode.right);
+			if(leftHeight > rightHeight){
+				return leftHeight+1;
+			}else{
+				return rightHeight+1;
+			}
+		}
+		
+		return height;
+	}
+	
 	public void insertElement(int a ){
 		
 		BtreeNode newElement = new BtreeNode();
@@ -48,7 +66,7 @@ public class SubhashBinaryTree {
 	/* function to print level order traversal of tree*/
     void printLevelOrder()
     {
-        int h = height(root);
+        int h = getHeight(root);
         int i;
         for (i=1; i<=h; i++){
         	printGivenLevel(root, i);
@@ -89,6 +107,18 @@ public class SubhashBinaryTree {
             printGivenLevel(root.left, level-1);
             printGivenLevel(root.right, level-1);
         }
+    }
+    
+    public void inOrderTraversal(BtreeNode node){
+    	
+    	if(node == null){
+    		return;
+    	}
+    	
+    	inOrderTraversal(node.left);
+    	System.out.print(node.data+" ");
+    	inOrderTraversal(node.right);
+    	
     }
     
 }
